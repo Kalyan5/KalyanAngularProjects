@@ -1,0 +1,82 @@
+<div class="container" ng-controller="landingCtrl">
+    
+   
+<!--
+    <form name="myForm">
+    <label for="singleSelect"> <h5>City:</h5> </label><br>
+    <select name="singleSelect" ng-model="xx">
+      <option value="hyderabad">hyderabad</option>
+      <option value="secunderabad">secunderabad</option>
+        <option value="vijayawada">vijayawada</option>
+      <option value="eluru">eluru</option>
+    </select><br>
+        <form name="myForm">
+    <label for="singleSelect"> <h5>State:</h5> </label><br>
+    <select name="singleSelect" ng-model="yy">
+      <option value="ts">ts</option>
+      <option value="ts">ts</option>
+        <option value="ap">ap</option>
+      <option value="ap">ap</option>
+    </select><br><br>
+-->
+    
+    
+        
+         <form name="myForm">
+        <label for="singleSelect"> <h5>State:</h5> </label><br>
+        <select name="singleSelect" ng-model="yy" ng-options="data.name for data in states" ng-change="loadCitiesByState()">
+          <option value="">Please Select</option>
+             </select><br></form>
+        
+    
+    <form name="myForm">
+    <label for="singleSelect"> <h5>City:</h5> </label><br>
+    <select name="singleSelect" ng-model="xx" ng-options ="data.name for data in citiesListHere">
+      <option value="">Select City</option>
+    </select><br>
+    
+    
+    
+    
+    
+        
+  <div class="row">  
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Kalyan Weather Forecast</h1>
+    </div>
+
+
+  
+  <div class="row">
+    <div class="col-md-3 col-md-offset-5">
+      <button ng-click="data()" class="btn btn-success" type="button" name="button">Submit</button>
+    </div>
+  </div>
+      
+      
+  <div class="row" ng-show="caption">
+    <div class="col-md-12 col-md-offset-3">
+      <h2>{{weatherData.description}}</h2>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+
+      <h4>sunrise----{{weatherData.astronomy.sunrise}}</h4>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+      <h4>Sunset----{{weatherData.astronomy.sunset}}</h4>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+      <h4>humidity----{{weatherData.atmosphere.humidity}}</h4>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+      <h4>pressure----{{weatherData.atmosphere.pressure}}</h4>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+      <h4>rising----{{weatherData.atmosphere.rising}}</h4>
+    </div>
+    <div class="col-md-12 col-md-offset-6">
+      <h4>{{visibility+weatherData.atmosphere.visibility}}</h4>
+    </div>
+  </div>
+
+</div>

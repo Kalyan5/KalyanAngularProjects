@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="yahoo_weather">
+
+<head>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
+<!--  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="app/app.css" media="screen" title="no title">-->
+    
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    
+<!--  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>-->
+
+  <title>Yahoo Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div ng-include="'app/landing/landing.html'">
+
+    </div>
+  </div>
+
+
+
+
+  <script src="app/app.js"></script>
+    
+  <script src="app/landing/landing.js"></script>
+  <script src="app/landing/landingCtrl.js"></script>
+  <script src="app/landing/landingSvc.js"></script>
+</body>
+
+</html>
